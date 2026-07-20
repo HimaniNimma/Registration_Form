@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <form>
+        <h1>Registration Form</h1>
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob">
+        <label>Gender</label>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">Other</label>
+
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="4" placeholder="Enter your address"></textarea>
+
+        <label for="city">City</label>
+        <input type="text" id="city" name="city">
+
+        <label for="state">State</label>
+        <input type="text" id="state" name="state">
+
+        <label for="country">Country</label>
+        <input type="text" id="country" name="country">
+
+        <label for="pincode">PIN Code</label>
+        <input type="text" id="pincode" name="pincode">
+
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password">
+
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword">
+        <label>Hobbies</label><br>
+        <input type="checkbox" id="reading">
+        <label for="reading">Reading</label>
+
+        <input type="checkbox" id="sports">
+        <label for="sports">Sports</label>
+
+        <input type="checkbox" id="music">
+        <label for="music">Music</label>
+        <br><br>
+        <label for="course">Course</label>
+        <select id="course">
+            <option>Select Course</option>
+            <option>B.Tech</option>
+            <option>B.Sc</option>
+            <option>BCA</option>
+            <option>MCA</option>
+        </select>
+        <br><br>
+        <label for="photo">Profile Picture</label>
+        <input type="file" id="photo">
+        <br><br>
+        <input type="checkbox" id="terms">
+        <label for="terms">I accept the Terms & Conditions</label>
+        <br><br>
+        <button type="submit">Register</button>
+        <button type="reset">Reset</button>
+    </form> 
+    </div>
+    <script src="script.js"></script> 
+</body>
+</html>
