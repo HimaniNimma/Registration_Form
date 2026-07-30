@@ -188,3 +188,31 @@ function clearErrors(){
         error.innerText = "";
     });
 }
+const togglePassword = document.getElementById("togglePassword");
+const toggleConfirmPassword = document.getElementById("toggleConfirmPassword");
+
+togglePassword.addEventListener("click", function(){
+
+    if(password.type === "password"){
+        password.type = "text";
+        this.textContent = "🙈";
+    }
+    else{
+        password.type = "password";
+        this.textContent = "👁️";
+    }
+
+});
+
+toggleConfirmPassword.addEventListener("click", function(){
+
+    if(confirmPassword.type === "password"){
+        confirmPassword.type = "text";
+        this.textContent = "🙈";
+    }
+    else{
+        confirmPassword.type = "password";
+        this.textContent = "👁️";
+    }
+
+});
