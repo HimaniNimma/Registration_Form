@@ -15,6 +15,8 @@ const course = document.getElementById("course");
 const password = document.getElementById("password");
 const confirmPassword = document.getElementById("confirmPassword");
 const terms = document.getElementById("terms");
+const genderError = document.getElementById("genderError");
+const termsError = document.getElementById("termsError");
 
 form.addEventListener("submit", function(event){
 
@@ -90,7 +92,7 @@ form.addEventListener("submit", function(event){
     }
 
     if(!genderSelected){
-        alert("Please select your gender");
+        genderError.innerText = "Please select your gender";
         isValid = false;
     }
 
@@ -164,7 +166,7 @@ form.addEventListener("submit", function(event){
 
     // Terms
     if(!terms.checked){
-        alert("Please accept the Terms & Conditions");
+        termsError.innerText = "Please accept the Terms & Conditions";
         isValid = false;
     }
 
@@ -181,12 +183,12 @@ function showError(input,message){
     error.innerText = message;
 
 }
-
 function clearErrors(){
 
     document.querySelectorAll(".error").forEach(function(error){
         error.innerText = "";
     });
+
 }
 const togglePassword = document.getElementById("togglePassword");
 const toggleConfirmPassword = document.getElementById("toggleConfirmPassword");
@@ -213,6 +215,29 @@ toggleConfirmPassword.addEventListener("click", function(){
     else{
         confirmPassword.type = "password";
         this.textContent = "👁️";
+    }
+
+});
+const passwordStrength = document.getElementById("passwordStrength");
+
+password.addEventListener("input", function(){
+
+    const value = password.value;
+
+    if(value.length === 0){
+        passwordStrength.textContent = "";
+    }
+    else if(value.length < 6){
+        passwordStrength.textContent = "Weak Password";
+        passwordStrength.style.color = "red";
+    }
+    else if(value.length < 10){
+        passwordStrength.textContent = "Medium Password";
+        passwordStrength.style.color = "orange";
+    }
+    else{
+        passwordStrength.textContent = "Strong Password";
+        passwordStrength.style.color = "green";
     }
 
 });

@@ -164,3 +164,9 @@ button[type="reset"]:hover{
     font-size:18px;
     user-select:none;
 }
+#passwordStrength{
+    display:block;
+    margin-top:5px;
+    font-size:13px;
+    font-weight:bold;
+}
