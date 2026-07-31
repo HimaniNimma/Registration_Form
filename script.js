@@ -17,6 +17,8 @@ const confirmPassword = document.getElementById("confirmPassword");
 const terms = document.getElementById("terms");
 const genderError = document.getElementById("genderError");
 const termsError = document.getElementById("termsError");
+const successMessage = document.getElementById("successMessage");
+
 
 form.addEventListener("submit", function(event){
 
@@ -171,8 +173,15 @@ form.addEventListener("submit", function(event){
     }
 
     if(isValid){
-        alert("Registration Successful!");
+
+        successMessage.style.display = "block";
+
         form.reset();
+
+        setTimeout(function(){
+            successMessage.style.display = "none";
+        },3000);
+
     }
 
 });
